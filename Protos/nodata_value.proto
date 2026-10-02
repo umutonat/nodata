@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package nodata.storage;
+
+message Value {
+  oneof kind {
+    bool is_null = 1;
+    bool bool_value = 2;
+    sint64 int64_value = 3;
+    uint64 uint64_value = 4;
+    double double_value = 5;
+    string string_value = 6;
+    bytes array_value = 7;
+    bytes object_value = 8;
+  }
+}

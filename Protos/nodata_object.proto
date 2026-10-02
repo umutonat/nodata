@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package nodata.storage;
+
+message Object {
+  map<string, bytes> fields = 1;
+}

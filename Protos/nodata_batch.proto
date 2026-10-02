@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package nodata.storage;
+
+import "nodata_record.proto";
+
+message Batch {
+  repeated Record records = 1;
+  uint64 checkpoint_revision = 2;
+  bool snapshot = 3;
+}
